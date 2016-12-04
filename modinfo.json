@@ -1,0 +1,21 @@
+{
+  "identifier": "com.pa.domdom.laser_unit_effects.purple_ant",
+  "context": "client",
+  "display_name": "More Pewple Ant",
+  "description": "To andreasurne. Love, dom",
+  "author": "dom314",
+  "forum": "https://forums.uberent.com/threads/rel-client-more-pew-pew.69229/",
+  "icon": "https://forums.uberent.com/data/avatars/l/1992/1992570.jpg",
+  "version": "1.0.1",
+  "category": [
+    "effects"
+  ],
+  "authorised": [
+    "1992570",
+    "1972077"
+  ],
+  "priority": 110,
+  "build": "99377",
+  "date": "2016-12-04",
+  "signature": " "
+}
