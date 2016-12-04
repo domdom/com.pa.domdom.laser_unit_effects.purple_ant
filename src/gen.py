@@ -9,7 +9,7 @@ from pa_tools.pa import pajson
 from pa_tools.mod.checker import check_mod
 from pa_tools.mod.generator import process_modinfo, process_changes
 
-from icons import generate_strat_icons
+from icons import generate_strat_icon
 
 def create_source_fs():
     # setting up source file system
@@ -27,13 +27,13 @@ def load_json(loader, path):
     return json
 
 
-def generate_mod(is_titans):
-    out_dir = '..'
+def generate_mod():
+    out_dir = '../'
 
     # create the base file system
     src = create_source_fs()
 
-    process_modinfo('/src/modinfo.json', src, out_dir)
+    modinfo = process_modinfo('/src/modinfo.json', src, out_dir)
 
     # mount the mod directory
     src.mount('/mod', out_dir)
@@ -42,9 +42,9 @@ def generate_mod(is_titans):
     shutil.rmtree(os.path.join(out_dir, 'pa'), ignore_errors=True)
 
     ## Generate the mod
-    process_changes([
-            '/ant/ant_patch.json'
-        ], src, out_dir)
+    process_changes([{
+            'from_file': '/src/ant/ant_patch.json'
+        }], src, out_dir)
 
     # generate the stratigic icon effects
     print ('==== running strategic icon generator')
@@ -61,5 +61,4 @@ def generate_mod(is_titans):
     shutil.rmtree(mod_path, ignore_errors=True)
     shutil.copytree(out_dir, mod_path)
 
-generate_mod(False)
-generate_mod(True)
+generate_mod()
