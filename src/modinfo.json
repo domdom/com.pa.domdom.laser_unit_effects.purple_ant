@@ -1,0 +1,12 @@
+{
+    "context": "client",
+    "identifier": "com.pa.domdom.purple_ant_for_andreas_g",
+    "display_name": "More Pewple Ant",
+    "description": "To andreasurne. Love, dom",
+    "author": "dom314",
+    "forum": "https://forums.uberent.com/threads/rel-client-more-pew-pew.69229/",
+    "icon": "https://forums.uberent.com/data/avatars/l/1971/1971233.jpg?1432580139",
+    "version": "1.0.1",
+    "authorised": ["1992570", "1972077"],
+    "priority": 110
+}
